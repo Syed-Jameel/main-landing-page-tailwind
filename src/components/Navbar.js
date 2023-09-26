@@ -84,19 +84,19 @@ export default function Navbar() {
                   </Disclosure.Button>
                 ))} */}
 
-                <Disclosure.Button as={Link} href="/" className={`${isActive("/") ? "text-blue-600 hover:text-blue-500   p-3 text-sm font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-sm"}`} aria-current={isActive("/") ? "page" : undefined}>
+                <Disclosure.Button as={Link} href="/" className={`${isActive("/") ? "text-blue-600 hover:text-blue-500   p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/") ? "page" : undefined}>
                   Home
                 </Disclosure.Button>
-                <Disclosure.Button as={Link} href="/about" className={`${isActive("/about") ? "text-blue-600 hover:text-blue-500 p-3 text-sm font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-sm"}`} aria-current={isActive("/about") ? "page" : undefined}>
+                <Disclosure.Button as={Link} href="/about" className={`${isActive("/about") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/about") ? "page" : undefined}>
                   About
                 </Disclosure.Button>
-                <Disclosure.Button as={Link} href="/contact" className={`${isActive("/services") ? "text-blue-600 hover:text-blue-500 p-3 text-sm font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-sm"}`} aria-current={isActive("/services") ? "page" : undefined}>
+                <Disclosure.Button as={Link} href="/contact" className={`${isActive("/services") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/services") ? "page" : undefined}>
                   Services
                 </Disclosure.Button>
                 {/*Projects Dropdown start*/}
-                <NavHoverDropdown />
+                <NavHoverDropdown label="Blogs" items={blogsItem} />
                 {/*Projects Dropdown end*/}
-                <Disclosure.Button as={Link} href="/contact" className={`${isActive("/contact") ? "text-blue-600 hover:text-blue-500 p-3 text-sm font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-sm"}`} aria-current={isActive("/contact") ? "page" : undefined}>
+                <Disclosure.Button as={Link} href="/contact" className={`${isActive("/contact") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/contact") ? "page" : undefined}>
                   Contact
                 </Disclosure.Button>
               </div>

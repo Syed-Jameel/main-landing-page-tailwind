@@ -43,7 +43,7 @@ export default function PricingChild() {
     return (
 
         <>
-            {pricing.map((p, ind) => (<div key={ind} className='space-y-4 w-[40%]'>
+            {pricing.map((p, ind) => (<div key={ind} className='space-y-4 w-full border-2 border-white sm:border-0 rounded-xl  p-6 sm-p-0 sm:w-[50%]'>
                 <Image width={70} src={p.image} alt="personal-clock" />
                 <h3 className="text-white font-bold">{p.type}</h3>
                 <h1 className="text-white text-7xl font-bold">

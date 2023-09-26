@@ -8,15 +8,15 @@ export default function TraficSources({ textContent, image }) {
 
 
                     {/* Left section */}
-                    <div className="bg-gray-0 px-16 py-4">
+                    <div className="bg-gray-0 px-0 sm:px-16 py-4">
                         <Image src={image} className="" alt="iphoneMockup" />
                     </div>
 
                     {/* Right section */}
-                    <div className="bg-gray-0 px-16 flex flex-col justify-center items-start space-y-6 ">
+                    <div className="bg-gray-0  px-2 sm:px-16 flex flex-col justify-center items-start space-y-3 sm:space-y-6 ">
                         <h3 className="text-gray-500 uppercase font-medium">trafic sources</h3>
 
-                        <h1 className="text-gray-700 text-5xl font-bold pr-24">
+                        <h1 className="text-gray-700 text-3xl sm:text-5xl font-bold pr-0 sm:pr-24">
                             {textContent.mainHeading}
                         </h1>
                         <p className="text-gray-900 opacity-90  text-lg font-normal leading-6">
