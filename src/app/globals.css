@@ -29,6 +29,11 @@ body {
     color: rgb(0, 145, 255);
 }
 
+.dotted-border {
+    border: 8px #CCCCCC dotted;
+    padding: 17px;
+}
+
 
 @media (max-width: 700px) {
     html {

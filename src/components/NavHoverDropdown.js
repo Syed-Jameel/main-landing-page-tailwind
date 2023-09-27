@@ -19,7 +19,7 @@ export default function NavHoverDropdown({ items }) {
           <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
         </svg>
       </button>
-      <ul className="absolute hidden shadow-lg font-semibold text-sm bg-white text-gray-900 rounded-lg pt-3 pb-2  group-hover:block  min-w-[120px]">
+      <ul className="absolute  hidden shadow-lg font-semibold text-sm bg-white text-gray-900 rounded-lg pt-3 pb-2  group-hover:block min-w-[120px]">
         {
           items.sublinks?.map((sublink) => (
             <li key={sublink.name}>

@@ -1,6 +1,6 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import NavHoverDropdown from "./NavHoverDropdown";
@@ -63,37 +63,34 @@ export default function Navbar() {
       <Disclosure as="nav" className="bg-white w-full">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-7xl  px-4 sm:px-6 lg:px-8 ">
+            <div className="mx-auto max-w-7xl  px-6 sm:px-6 lg:px-8 ">
               <div className="flex h-20 items-center justify-between ">
-                {/* <div className="flex items-center"> */}
-                <div className="flex-shrink-0 sm:p-1">
-                  {/* <Image width={38} height={38} src={logo} alt="logo" /> */}
-                  <h1 className="text-gray-900 hover:text-blue-500 p-2 text-2xl font-bold">Main</h1>
+                <div className="flex items-center flex-shrink-0 ">
+                  <div className="flex md:hidden">
+                    {/* Mobile menu button */}
+                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-full font-bold bg-gray-200 p-4 text-gray-900 hover:bg-gray-100 hover:text-gray-900 border-2 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <span className="absolute -inset-0.5" />
+                      <span className="sr-only">Open main menu</span>
+                      {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars2Icon className="block h-6 w-6" aria-hidden="true" />}
+                    </Disclosure.Button>
+                  </div>
+                  <h1 className="text-gray-700 hover:text-blue-500 pl-4 text-2xl font-bold">Main</h1>
                 </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
 
-                    <NavHoverDropdown items={homeItems} />
-                    <NavHoverDropdown items={aboutItems} />
-                    <NavHoverDropdown items={servicesItems} />
-                    <NavHoverDropdown items={blogsItems} />
-                    <NavHoverDropdown items={contactItems} />
-
-                    <div className="space-x-2">
-                      <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded">Register</button>
+                <div className="flex items-center space-x-8">
+                  <div className="hidden md:block">
+                    <div className="ml-10 flex items-baseline space-x-4">
+                      <NavHoverDropdown items={homeItems} />
+                      <NavHoverDropdown items={aboutItems} />
+                      <NavHoverDropdown items={servicesItems} />
+                      <NavHoverDropdown items={blogsItems} />
+                      <NavHoverDropdown items={contactItems} />
                     </div>
                   </div>
-                </div>
-                {/* </div> */}
 
-                <div className="flex md:hidden">
-                  {/* Mobile menu button */}
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-full font-bold bg-gray-900 p-2 text-white hover:bg-gray-100 hover:text-gray-900 border-2 hover:border-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-800">
-                    <span className="absolute -inset-0.5" />
-                    <span className="sr-only">Open main menu</span>
-                    {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6" aria-hidden="true" />}
-                  </Disclosure.Button>
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded">Register</button>
                 </div>
+
               </div>
             </div>
 
@@ -115,11 +112,12 @@ export default function Navbar() {
                   Services
                 </Disclosure.Button>
                 {/*Projects Dropdown start*/}
-                <NavHoverDropdown items={blogsItems} />
+                {/* <NavHoverDropdown items={blogsItems} /> */}
                 {/*Projects Dropdown end*/}
                 <Disclosure.Button as={Link} href="/contact" className={`${isActive("/contact") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/contact") ? "page" : undefined}>
                   Contact
                 </Disclosure.Button>
+
               </div>
 
             </Disclosure.Panel>
