@@ -14,7 +14,7 @@ export default function Hero() {
                     <div className="bg-gray-0 space-y-6 sm:space-y-10 px-2 sm:px-8 py-4">
                         <div className="flex items-center justify-between  gap-x-4">
                             <div className="flex items-center justify-center space-x-2">
-                                <button className="w-[70px] h-[70px] bg-gray-900 hover:bg-blue-700 shadow-md hover:shadow-lg rounded-full flex justify-center items-center"><i class="bi bi-play-fill text-4xl text-white"></i></button>
+                                <button className="w-[70px] h-[70px] bg-gray-900 hover:bg-blue-700 shadow-md hover:shadow-lg rounded-full flex justify-center items-center"><i className="bi bi-play-fill text-4xl text-white"></i></button>
                                 <h3 className="text-purple-900 font-medium">Play Promo</h3>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ export default function Hero() {
                         </p>
                         <div className="space-y-2">
                             <p className="text-purple-900 opacity-90  text-lg font-normal leading-6">Available now</p>
-                            <Image src={appStore} width={150} height={100} alt="app store" />
+                            <Image src={appStore} width={150} height={100} alt="app store" className='hover:shadow-xl cursor-pointer' />
                         </div>
                     </div>
 

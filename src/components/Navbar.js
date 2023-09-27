@@ -13,12 +13,42 @@ const navigation = [
   { name: "Contact", href: "/contact", current: false },
 ];
 
+const homeItems = {
+  label: "Home", href: "/", sublinks: [
+    { name: "Home 1", href: "/", current: false },
+    { name: "Home 2", href: "/", current: false },
+    { name: "Home 3", href: "/", current: false },
+  ]
+}
 
-const blogsItem = [
-  { name: "Blog 1", href: "/", current: true },
-  { name: "Blog 2", href: "/", current: false },
-  { name: "Blog 3", href: "/", current: false },
-];
+const aboutItems = {
+  label: "About", href: "/about", sublinks: [
+    { name: "About 1", href: "/", current: false },
+    { name: "About 2", href: "/", current: false },
+    { name: "About 3", href: "/", current: false },
+  ]
+}
+
+const servicesItems = {
+  label: "Services", href: "/services", sublinks: [
+    { name: "Service 1", href: "/", current: false },]
+};
+
+const blogsItems = {
+  label: "Blogs", href: "/blogs", sublinks: [
+    { name: "Blog 1", href: "/", current: false },
+    { name: "Blog 2", href: "/", current: false },
+    { name: "Blog 3", href: "/", current: false },
+  ]
+}
+
+const contactItems = {
+  label: "Contact", href: "/contact", sublinks: [
+    { name: "Contact 1", href: "/", current: false },
+    { name: "Contact 2", href: "/", current: false },
+    { name: "Contact 3", href: "/", current: false },
+  ]
+}
 
 
 export default function Navbar() {
@@ -34,7 +64,7 @@ export default function Navbar() {
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl  px-4 sm:px-6 lg:px-8 ">
-              <div className="flex h-16 items-center justify-between ">
+              <div className="flex h-20 items-center justify-between ">
                 {/* <div className="flex items-center"> */}
                 <div className="flex-shrink-0 sm:p-1">
                   {/* <Image width={38} height={38} src={logo} alt="logo" /> */}
@@ -42,21 +72,12 @@ export default function Navbar() {
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
-                    <Link href="/" className={`${isActive("/") ? "text-blue-600 hover:text-blue-500  px-3 py-2 text-base font-bold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-base"}`}>
-                      Home
-                    </Link>
-                    <Link href="/about" className={`${isActive("/about") ? "text-blue-600 hover:text-blue-500  px-3 py-2 text-base font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-base"}`}>
-                      About
-                    </Link>
-                    <Link href="/services" className={`${isActive("/services") ? "text-blue-600 hover:text-blue-500  px-3 py-2 text-base font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-base"}`}>
-                      Services
-                    </Link>
-                    {/*Projects Dropdown start*/}
-                    <NavHoverDropdown label="Blogs" items={blogsItem} />
-                    {/*Projects Dropdown end*/}
-                    <Link href="/conatct" className={`${isActive("/conatct") ? "text-blue-600 hover:text-blue-500  px-3 py-2 text-base font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-base"}`}>
-                      Contact
-                    </Link>
+
+                    <NavHoverDropdown items={homeItems} />
+                    <NavHoverDropdown items={aboutItems} />
+                    <NavHoverDropdown items={servicesItems} />
+                    <NavHoverDropdown items={blogsItems} />
+                    <NavHoverDropdown items={contactItems} />
 
                     <div className="space-x-2">
                       <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded">Register</button>
@@ -94,7 +115,7 @@ export default function Navbar() {
                   Services
                 </Disclosure.Button>
                 {/*Projects Dropdown start*/}
-                <NavHoverDropdown label="Blogs" items={blogsItem} />
+                <NavHoverDropdown items={blogsItems} />
                 {/*Projects Dropdown end*/}
                 <Disclosure.Button as={Link} href="/contact" className={`${isActive("/contact") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/contact") ? "page" : undefined}>
                   Contact

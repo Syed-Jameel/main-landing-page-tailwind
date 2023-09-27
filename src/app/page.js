@@ -30,9 +30,7 @@ export default function Home() {
   // }
 
   return (
-    <main className="p-0 min-h-screen">
-
-
+    <main className="min-h-screen">
       <Hero />
       <div className="bg-red-100">
         <TraficSources textContent={transactionTextContent} image={transactionImage} />

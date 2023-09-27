@@ -16,7 +16,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/contact",
+        source: "/blogs",
         destination: "/",
         permanent: false,
       },
