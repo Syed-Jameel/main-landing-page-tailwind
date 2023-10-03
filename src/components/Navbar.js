@@ -1,57 +1,18 @@
 "use client";
+import { useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import NavHoverDropdown from "./NavHoverDropdown";
-
-const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "About", href: "/about", current: false },
-  { name: "Services", href: "/services", current: false },
-  { name: "Blogs", href: "/blogs", current: false },
-  { name: "Contact", href: "/contact", current: false },
-];
-
-const homeItems = {
-  label: "Home", href: "/", sublinks: [
-    { name: "Home 1", href: "/", current: false },
-    { name: "Home 2", href: "/", current: false },
-    { name: "Home 3", href: "/", current: false },
-  ]
-}
-
-const aboutItems = {
-  label: "About", href: "/about", sublinks: [
-    { name: "About 1", href: "/", current: false },
-    { name: "About 2", href: "/", current: false },
-    { name: "About 3", href: "/", current: false },
-  ]
-}
-
-const servicesItems = {
-  label: "Services", href: "/services", sublinks: [
-    { name: "Service 1", href: "/", current: false },]
-};
-
-const blogsItems = {
-  label: "Blogs", href: "/blogs", sublinks: [
-    { name: "Blog 1", href: "/", current: false },
-    { name: "Blog 2", href: "/", current: false },
-    { name: "Blog 3", href: "/", current: false },
-  ]
-}
-
-const contactItems = {
-  label: "Contact", href: "/contact", sublinks: [
-    { name: "Contact 1", href: "/", current: false },
-    { name: "Contact 2", href: "/", current: false },
-    { name: "Contact 3", href: "/", current: false },
-  ]
-}
-
+import { navigationItems } from "./navbar/navigationItems";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 
 export default function Navbar() {
+
+  const [show, setShow] = useState(false);
+  const [label, setLabel] = useState("");
+
   const pathname = usePathname();
   // Function to check if a given path is the current route
   const isActive = (path) => {
@@ -80,47 +41,57 @@ export default function Navbar() {
                 <div className="flex items-center space-x-8">
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
-                      <NavHoverDropdown items={homeItems} />
-                      <NavHoverDropdown items={aboutItems} />
-                      <NavHoverDropdown items={servicesItems} />
-                      <NavHoverDropdown items={blogsItems} />
-                      <NavHoverDropdown items={contactItems} />
+                      <NavHoverDropdown items={navigationItems} />
                     </div>
                   </div>
-
                   <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded">Register</button>
                 </div>
 
               </div>
             </div>
 
-            <Disclosure.Panel className="md:hidden ">
-              <div className="space-y-2 p-4 bg-white flex flex-col justify-start items-start min-h-screen">
-                {/* {navigation.map((item) => (
-                  <Disclosure.Button key={item.name} as="a" href={item.href} className={classNames(item.current ? "bg-gray-900 text-white" : "text-black hover:bg-gray-900 hover:text-white", "block rounded-md px-3 py-2 text-base font-medium")} aria-current={item.current ? "page" : undefined}>
-                    {item.name}
-                  </Disclosure.Button>
-                ))} */}
-
-                <Disclosure.Button as={Link} href="/" className={`${isActive("/") ? "text-blue-600 hover:text-blue-500   p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/") ? "page" : undefined}>
+            {/* Mobile Navbar */}
+            <ul
+              className={`
+       bg-white fixed w-full top-20 overflow-y-auto bottom-0 py-6
+        duration-500 ${open ? "left-0" : "left-[-100%]"}
+        `}
+            >
+              {/* <li>
+                <Link href="/" className="py-4 pl-7 font-semibold inline-block">
                   Home
-                </Disclosure.Button>
-                <Disclosure.Button as={Link} href="/about" className={`${isActive("/about") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/about") ? "page" : undefined}>
-                  About
-                </Disclosure.Button>
-                <Disclosure.Button as={Link} href="/contact" className={`${isActive("/services") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/services") ? "page" : undefined}>
-                  Services
-                </Disclosure.Button>
-                {/*Projects Dropdown start*/}
-                {/* <NavHoverDropdown items={blogsItems} /> */}
-                {/*Projects Dropdown end*/}
-                <Disclosure.Button as={Link} href="/contact" className={`${isActive("/contact") ? "text-blue-600 hover:text-blue-500 p-3 text-lg font-semibold" : "text-black font-semibold hover:bg-gray-0 hover:text-blue-600 rounded-md px-3 py-2 text-lg"}`} aria-current={isActive("/contact") ? "page" : undefined}>
-                  Contact
-                </Disclosure.Button>
-
-              </div>
-
-            </Disclosure.Panel>
+                </Link>
+              </li> */}
+              <>
+                {navigationItems.map((item) => (
+                  <div>
+                    <div>
+                      <h1 className="py-4 pl-7 text-gray-800 font-semibold flex justify-between items-center md:pr-0 pr-5 hover:text-blue-600"
+                        onClick={() => {
+                          setShow(!show)
+                          setLabel(item.label)
+                        }}>
+                        {item.label}
+                        <span className={`text-sm font-bold md:hidden inline`}>
+                          {
+                            label === item.label && show ? <ChevronUpIcon className="w-8 h-8 " /> : <ChevronDownIcon className="w-8 h-8 " />
+                          }
+                        </span>
+                      </h1>
+                      <div
+                        className={`${label === item.label && show ? "md:hidden" : "hidden"}`}
+                      >
+                        {item.sublinks.map((sublink) => (
+                          <li className="py-3 pl-14 hover:text-blue-600">
+                            <Link href={sublink.href}>{sublink.name}</Link>
+                          </li>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </>
+            </ul>
           </>
         )}
       </Disclosure>

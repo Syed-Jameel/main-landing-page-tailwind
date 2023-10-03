@@ -1,5 +1,5 @@
 import Career from "@/components/Career";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+
 
 export default function page() {
     return (
@@ -10,9 +10,9 @@ export default function page() {
                         {/* Left section */}
                         <div className="h-[400px] lg:h-full lg:col-span-2 bg-white rounded-none sm:rounded-lg">
                             <iframe
-                               className="rounded-none sm:rounded-lg w-full h-full"
+                                className="rounded-none sm:rounded-lg w-full h-full"
                                 title="Current Location"
-                    
+
                                 src="https://maps.google.com/maps?width=800&height=500&hl=en&q=Office No 28 First Floor Amol Sagar State Poona College Road, Hidayatulla Rd, Agarwal Colony, Camp, Pune, Maharashtra 411001&t=&z=19&ie=UTF8&iwloc=B&output=embed"
                             />
 
@@ -53,8 +53,6 @@ export default function page() {
             </div>
 
             <Career />
-
-            <ScrollToTopButton />
         </main >
     )
 }

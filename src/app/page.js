@@ -1,6 +1,5 @@
 
 import Hero from "@/components/Hero";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
 import TraficSources from "@/components/TraficSources";
 import transactionImage from "../../public/transaction.png"
 import budgetImage from "../../public/budget.png"
@@ -45,10 +44,6 @@ export default function Home() {
       <div className="bg-indigo-950">
         <FAQ />
       </div>
-
-
-
-      <ScrollToTopButton />
     </main>
   );
 }

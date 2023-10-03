@@ -3,6 +3,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const montserrat = Montserrat({
   weight: ["300", "400"],
@@ -21,7 +22,10 @@ export default function RootLayout({ children }) {
         <header className="fixed top-0 left-0 right-0 z-50 ">
           <Navbar />
         </header>
-        <section>{children}</section>
+        <section>
+          {children}
+          <ScrollToTopButton />
+          </section>
         <footer>
           <Footer />
         </footer>
