@@ -81,8 +81,8 @@ export default function Navbar() {
                     <div
                       className={`${label === item.label && show ? "md:hidden" : "hidden"}`}
                     >
-                      {item.sublinks.map((sublink) => (
-                        <li className="py-3 pl-14 hover:text-blue-600">
+                      {item.sublinks.map((sublink, index) => (
+                        <li key={index} className="py-3 pl-14 hover:text-blue-600">
                           <Link href={sublink.href}>{sublink.name}</Link>
                         </li>
                       ))}
