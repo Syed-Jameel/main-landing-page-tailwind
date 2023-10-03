@@ -1,5 +1,5 @@
 "use client"
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,7 +18,7 @@ export default function NavHoverDropdown({ items }) {
     if (parentItem) {
       parentItem.current = true;
     }
-  }, [])
+  }, [items, pathname])
 
   const handleSublinkClick = (sublink) => {
     // Set the current state of the parent item to true

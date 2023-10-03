@@ -42,14 +42,14 @@ export default function WhatWeDo() {
                             <div className='sm:w-1/2 pe-4 space-y-2'>
                                 <Image src={CirclesThreePlus} alt="SelectionAll" className='w-8 h-8' />
                                 <p className='text-white text-lg font-bold '>Financial Audit</p>
-                                <p className="text-gray-400 opacity-90   text-base font-normal leading-6">
+                                <p className="text-gray-400 opacity-90 text-base font-normal leading-6">
                                     Audits help your company to have the unique plan for your brand.
                                 </p>
                             </div>
                             <div className='sm:w-1/2 pe-4 space-y-2'>
                                 <Image src={FigmaLogo} alt="SelectionAll" className='w-6 h-8' />
                                 <p className='text-white text-lg font-bold '>Website/App Design</p>
-                                <p className="text-gray-400 opacity-90   text-base font-normal leading-6">
+                                <p className="text-gray-400 opacity-90 text-base font-normal leading-6">
                                     UI/UX design gives the appearance above your brand's behavior.
                                 </p>
                             </div>

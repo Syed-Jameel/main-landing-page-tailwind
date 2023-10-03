@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const posts = [
   {
     id: 1,
@@ -48,7 +50,7 @@ export default function Posts() {
         {posts.map((post) => (
           <div key={post.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-lg bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-              <img src={post.imageSrc} alt={post.imageAlt} className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
+              <Image src={post.imageSrc} alt={post.imageAlt} className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
             </div>
             <div className="mt-4 flex flex-col items-start justify-between gap-4">
               <div className="flex justify-between align-middle ">

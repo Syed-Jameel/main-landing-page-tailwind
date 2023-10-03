@@ -63,32 +63,32 @@ export default function Navbar() {
                 </Link>
               </li> */}
               <>
-                {navigationItems.map((item) => (
-                  <div>
-                    <div>
-                      <h1 className="py-4 pl-7 text-gray-800 font-semibold flex justify-between items-center md:pr-0 pr-5 hover:text-blue-600"
-                        onClick={() => {
-                          setShow(!show)
-                          setLabel(item.label)
-                        }}>
-                        {item.label}
-                        <span className={`text-sm font-bold md:hidden inline`}>
-                          {
-                            label === item.label && show ? <ChevronUpIcon className="w-8 h-8 " /> : <ChevronDownIcon className="w-8 h-8 " />
-                          }
-                        </span>
-                      </h1>
-                      <div
-                        className={`${label === item.label && show ? "md:hidden" : "hidden"}`}
-                      >
-                        {item.sublinks.map((sublink) => (
-                          <li className="py-3 pl-14 hover:text-blue-600">
-                            <Link href={sublink.href}>{sublink.name}</Link>
-                          </li>
-                        ))}
-                      </div>
+                {navigationItems.map((item, index) => (
+
+                  <div key={index}>
+                    <h1 className="py-4 pl-7 text-gray-800 font-semibold flex justify-between items-center md:pr-0 pr-5 hover:text-blue-600"
+                      onClick={() => {
+                        setShow(!show)
+                        setLabel(item.label)
+                      }}>
+                      {item.label}
+                      <span className={`text-sm font-bold md:hidden inline`}>
+                        {
+                          label === item.label && show ? <ChevronUpIcon className="w-8 h-8 " /> : <ChevronDownIcon className="w-8 h-8 " />
+                        }
+                      </span>
+                    </h1>
+                    <div
+                      className={`${label === item.label && show ? "md:hidden" : "hidden"}`}
+                    >
+                      {item.sublinks.map((sublink) => (
+                        <li className="py-3 pl-14 hover:text-blue-600">
+                          <Link href={sublink.href}>{sublink.name}</Link>
+                        </li>
+                      ))}
                     </div>
                   </div>
+
                 ))}
               </>
             </ul>
