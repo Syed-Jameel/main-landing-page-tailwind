@@ -1,7 +1,4 @@
 export default function Leads({ data }) {
-
-
-
     return (
 
         <div className=" px-4 py-4 sm:py-6 grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-x-4">
@@ -26,29 +23,7 @@ export default function Leads({ data }) {
                         </div>
                     ))
                 }
-
-                {/* <div className='bg-gray-0 space-y-2'>
-                        <div className='flex justify-start items-center space-x-2'>
-                            <i className="bi bi-pentagon-half text-2xl text-red-600"></i>
-                            <span className="text-gray-700 text-4xl font-bold ">
-                                35+
-                            </span>
-
-                        </div>
-
-
-                        <p className="text-gray-900 opacity-90  text-lg font-semibold">
-                            awards for digital
-                            innovation
-                        </p>
-                        <p className="text-gray-700 opacity-90 text-base font-normal">
-                            We’ve structured our workflow processes were from the funny <b>the century rather</b>, initial all the made, have spare to negatives.
-                        </p>
-                    </div> */}
             </div>
-
-
-
         </div>
     )
 }

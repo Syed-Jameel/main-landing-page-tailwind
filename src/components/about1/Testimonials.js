@@ -2,7 +2,7 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 export default function Testimonials() {
     return (
-        <div className="mx-auto max-w-2xl mt-0 sm:mt-0 px-4 py-0 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl mt-0 sm:mt-0 px-6 py-10 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8">
             <div className=" grid grid-cols-1 lg:grid-cols-5 sm:gap-x-4 space-y-4">
                 <div className='col-span-2 pr-24 sm:pr-48 space-y-4'>
                     <h3 className="text-gray-500 uppercase font-medium">testimonials</h3>

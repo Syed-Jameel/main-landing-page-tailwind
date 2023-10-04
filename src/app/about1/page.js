@@ -4,6 +4,9 @@ import Capabilities from "@/components/about1/Capabilities"
 import Breadcrumbs from "@/components/common/Breadcrumbs"
 import Leads from "@/components/common/Leads"
 import Testimonials from "@/components/about1/Testimonials"
+import Clients from "@/components/common/Clients"
+import Awards from "@/components/about1/Awards"
+import Collaborate from "@/components/about1/Collaborate"
 
 const leadsAbout1 = [
     { count: 28, icon: "bi-box-fill", title: "designers and developers", description: "ur clients describe us as a product team which creates amazing UI/UX, by crafting top-notch UX." },
@@ -19,12 +22,14 @@ export default function page() {
                 <Capabilities />
                 <Leads data={leadsAbout1} />
             </div>
-            <div className="bg-[#111013]">
+            <div className="bg-[#1a191b]">
                 <Testimonials />
             </div>
             <div className="bg-[#111013]">
-                <Testimonials />
+                <Clients />
             </div>
+            <Awards />
+            <Collaborate />
         </main>
     )
 }

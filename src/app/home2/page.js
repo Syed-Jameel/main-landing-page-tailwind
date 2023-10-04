@@ -3,7 +3,7 @@ import WhatWeDo from "@/components/home2/WhatWeDo";
 import Capabilities from "@/components/home2/Capabilities";
 import Showcase from "@/components/home2/Showcase";
 import WebAndMobile from "@/components/home2/WebAndMobile";
-import Clients from "@/components/home2/Clients";
+import Clients from "@/components/common/Clients";
 import Leads from "@/components/common/Leads";
 import Testimonial from "@/components/home2/Testimonial";
 import MapAndAddress from "@/components/common/MapAndAddress";

@@ -30,7 +30,7 @@ export default function WebAndMobile() {
 
     return (
 
-        <div className="px-4 py-8 sm:py-6 grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-x-4">
+        <div className="px-4 py-6  grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-x-4">
 
             {/* Left section */}
             <div className="">
