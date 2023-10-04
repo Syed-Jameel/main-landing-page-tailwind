@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import NavHoverDropdown from "./NavHoverDropdown";
-import { navigationItems } from "./navbar/navigationItems";
+import { navigationItems } from "./navigationItems";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 
 export default function Navbar() {
@@ -13,11 +13,34 @@ export default function Navbar() {
   const [show, setShow] = useState(false);
   const [label, setLabel] = useState("");
 
-  const pathname = usePathname();
-  // Function to check if a given path is the current route
-  const isActive = (path) => {
-    return pathname === path;
-  };
+  const pathname = usePathname(null);
+
+  useEffect(() => {
+    const resetNavigationItems = navigationItems.map((item) => ({
+      ...item,
+      current: false,
+    }));
+
+  
+
+    const parentItem = navigationItems.find((item) =>
+      item.sublinks.some((sublink) => sublink.href === pathname)
+    );
+
+    console.log(parentItem);
+
+    if (parentItem) {
+      parentItem.current = true;
+      // resetNavigationItems.forEach((item) => {
+      //   if (item !== parentItem) {
+      //     item.current = false;
+      //   }
+      // });
+    }
+
+
+    console.log(resetNavigationItems)
+  }, [navigationItems, pathname])
 
   return (
     <>
@@ -52,7 +75,7 @@ export default function Navbar() {
 
             {/* Mobile Navbar */}
             <ul
-              className={`
+              className={` md:hidden block
        bg-white fixed w-full top-20 overflow-y-auto bottom-0 py-6
         duration-500 ${open ? "left-0" : "left-[-100%]"}
         `}

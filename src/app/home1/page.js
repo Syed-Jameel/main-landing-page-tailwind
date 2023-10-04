@@ -1,35 +1,33 @@
 import Hero from "@/components/home1/Hero";
-import WhatWeDo from "@/components/home1/WhatWeDo";
-import Capabilities from "@/components/home1/Capabilities";
-import Showcase from "@/components/home1/Showcase";
-import WebAndMobile from "@/components/home1/WebAndMobile";
-import Clients from "@/components/home1/Clients";
+import TraficSources from "@/components/home1/TraficSources";
+import transactionImage from "../../../public/transaction.png"
+import ExpectedFeatures from "@/components/home1/ExpectedFeatures";
 import Leads from "@/components/home1/Leads";
-import Testimonial from "@/components/home1/Testimonial";
-import Contact from "@/components/home1/Contact";
-import Careers from "@/components/home1/Careers";
+import Pricing from "@/components/home1/Pricing";
+import FAQ from "@/components/home1/FAQ";
+
+export default function Home() {
+    const transactionTextContent = {
+        mainHeading: "Insights & spam detection.",
+        boldParaText: "Open stage API",
+        remainingParaText: "Open stage API with a core feature of data occaecat cupidatat proident, taken possession of my entire soul, like these sweet mornings.",
+    }
 
 
-
-export default function page() {
     return (
-        <main className="">
+        <main>
             <Hero />
-            <div className="bg-[#111013]">
-                <WhatWeDo />
+            <div className="bg-red-100">
+                <TraficSources textContent={transactionTextContent} image={transactionImage} />
+                <ExpectedFeatures />
+                <Leads />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 ">
-                <Capabilities />
-                <Showcase />
+            <div className="bg-indigo-900">
+                <Pricing />
             </div>
-            <div className="bg-white">
-                <WebAndMobile />
+            <div className="bg-indigo-950">
+                <FAQ />
             </div>
-            <Leads />
-            <Clients />
-            <Testimonial />
-            <Contact />
-            <Careers />
-        </main >
-    )
+        </main>
+    );
 }

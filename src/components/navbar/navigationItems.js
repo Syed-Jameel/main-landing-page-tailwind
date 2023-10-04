@@ -6,7 +6,6 @@ export const navigationItems = [
         sublinks: [
             { name: "Home 1", href: "/home1" },
             { name: "Home 2", href: "/home2" },
-            { name: "Home 3", href: "/home3" },
         ]
     },
     {
@@ -16,7 +15,7 @@ export const navigationItems = [
         sublinks: [
             { name: "About 1", href: "/about1" },
             { name: "About 2", href: "/about2" },
-            { name: "About 3", href: "/about3" },
+
         ]
     },
     {
@@ -26,7 +25,6 @@ export const navigationItems = [
         sublinks: [
             { name: "Service 1", href: "/service1" },
             { name: "Service 2", href: "/service2" },
-            { name: "Service 3", href: "/service3" },
         ]
     },
     {
@@ -36,7 +34,6 @@ export const navigationItems = [
         sublinks: [
             { name: "Blog 1", href: "/blog1" },
             { name: "Blog 2", href: "/blog2" },
-            { name: "Blog 3", href: "/blog3" },
         ]
     },
     {
@@ -46,7 +43,6 @@ export const navigationItems = [
         sublinks: [
             { name: "Contact 1", href: "/contact1" },
             { name: "Contact 2", href: "/contact2" },
-            { name: "Contact 3", href: "/contact3" },
         ]
     },
 ];

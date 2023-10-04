@@ -1,11 +1,10 @@
-import Career from "@/components/Career";
-
+import Career from "@/components/contact1/Career";
 
 export default function page() {
     return (
-        <main className="min-h-screen">
+        <main>
             <div className="bg-[#E5E3DF] w-full">
-                <div className="mx-auto max-w-2xl mt-12 sm:mt-16 px-0 pt-8 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
+                <div className="mx-auto max-w-2xl px-0 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
                     <div className="bg-yellow-0 lg:py-24 grid grid-cols-1 lg:grid-cols-3 sm:gap-y-6 lg:gap-x-4">
                         {/* Left section */}
                         <div className="h-[400px] lg:h-full lg:col-span-2 bg-white rounded-none sm:rounded-lg">

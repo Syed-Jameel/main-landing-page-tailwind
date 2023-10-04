@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import PersonalClock from "../../public/clock1.png"
-import CompanyClock from "../../public/clock2.png"
+import PersonalClock from "../../../public/clock1.png"
+import CompanyClock from "../../../public/clock2.png"
 
 const pricing = [{
     image: PersonalClock,

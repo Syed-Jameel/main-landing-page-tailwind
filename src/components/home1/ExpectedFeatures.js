@@ -1,5 +1,3 @@
-import React from 'react'
-import Image from 'next/image';
 import { DocumentCheckIcon, FingerPrintIcon, ChatBubbleBottomCenterTextIcon, ChatBubbleLeftEllipsisIcon, ArrowTrendingUpIcon, CircleStackIcon } from "@heroicons/react/20/solid";
 
 export default function ExpectedFeatures() {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { PlusIcon, MinusIcon } from "@heroicons/react/20/solid";
 
 export default function FaqAccordion({ id, title, description, activeId, setActiveId }) {

@@ -10,15 +10,10 @@ export default function NavHoverDropdown({ items }) {
 
   // Function to check if a given path is the current route
   const isActive = (path) => {
+
     return pathname === path;
   };
 
-  useEffect(() => {
-    const parentItem = items.find((item) => item.sublinks.map((sublink) => sublink.href === pathname));
-    if (parentItem) {
-      parentItem.current = true;
-    }
-  }, [items, pathname])
 
   const handleSublinkClick = (sublink) => {
     // Set the current state of the parent item to true
@@ -27,6 +22,8 @@ export default function NavHoverDropdown({ items }) {
       parentItem.current = true;
     }
   };
+
+
 
 
   return (

@@ -1,9 +1,9 @@
 import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { Montserrat } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
+import ScrollToTopButton from "@/components/common/ScrollToTopButton";
 
 const montserrat = Montserrat({
   weight: ["300", "400"],

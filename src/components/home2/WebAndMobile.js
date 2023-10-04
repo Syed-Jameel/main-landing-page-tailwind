@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import Accordion from './Accordion'
+import Accordion from '../common/Accordion'
 
 const accordionData = [
     {
