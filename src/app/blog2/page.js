@@ -9,7 +9,7 @@ import FeaturedPosts from "@/components/blog1/FeaturedPosts";
 import Nav from "@/components/blog2/Nav";
 import Navbar2 from "@/components/navbar/Navbar2";
 
-export default function page() {
+export default function Page() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalBlogs = blogData.length;
     const blogsPerPage = 6;

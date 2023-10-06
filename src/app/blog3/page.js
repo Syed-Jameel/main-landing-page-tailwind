@@ -8,7 +8,7 @@ import Navbar1 from "@/components/navbar/Navbar1";
 import Blog from "@/components/blog3/Blog";
 
 
-export default function page() {
+export default function Page() {
     const data = blogData[0]
 
 

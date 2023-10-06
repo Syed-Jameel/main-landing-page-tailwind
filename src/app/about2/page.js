@@ -10,7 +10,7 @@ import Testimonials from '@/components/about2/Testimonials'
 import Breadcrumbs from '@/components/common/Breadcrumbs'
 import Navbar2 from '@/components/navbar/Navbar2'
 
-export default function page() {
+export default function Page() {
 
     return (
         <>

@@ -7,7 +7,7 @@ import Pricing from "@/components/home1/Pricing";
 import FAQ from "@/components/home1/FAQ";
 import Navbar1 from "@/components/navbar/Navbar1";
 
-export default function Home() {
+export default function Page() {
     const transactionTextContent = {
         mainHeading: "Insights & spam detection.",
         boldParaText: "Open stage API",

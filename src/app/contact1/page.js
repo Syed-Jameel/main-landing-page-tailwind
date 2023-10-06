@@ -1,7 +1,7 @@
 import Career from "@/components/contact1/Career";
 import Navbar2 from "@/components/navbar/Navbar2";
 
-export default function page() {
+export default function Page() {
     return (
         <>
             <header>

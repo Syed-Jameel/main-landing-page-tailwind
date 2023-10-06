@@ -4,7 +4,7 @@ import Hero from "@/components/contact2/Hero";
 import Navbar2 from "@/components/navbar/Navbar2";
 
 
-export default function page() {
+export default function Page() {
     return (
         <>
             <header>

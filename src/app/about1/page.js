@@ -14,7 +14,7 @@ const leadsAbout1 = [
     { count: 345, icon: "bi-pentagon-half", title: "awards for digital innovation", description: "We’ve structured our workflow processes were from the funny the century rather." }
 ]
 
-export default function page() {
+export default function Page() {
     return (
         <>
             <header>
