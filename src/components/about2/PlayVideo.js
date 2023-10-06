@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react'
 import Image from "next/image"
-import PlayVideoImage from "../../../public/PlayVideo.webp"
+import PlayVideoImage from "../../../public/playVideo.webp"
 import Accordion from "../common/Accordion"
 
 const accordionData = [
