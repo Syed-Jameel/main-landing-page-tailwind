@@ -8,6 +8,7 @@ import Leads from "@/components/common/Leads";
 import Testimonial from "@/components/home2/Testimonial";
 import MapAndAddress from "@/components/common/MapAndAddress";
 import Careers from "@/components/home2/Careers";
+import Navbar2 from "@/components/navbar/Navbar2";
 
 const leadshome2 = [
     { count: 28, icon: "bi-box-fill", title: "designers and developers", description: "Using year-over-year approaches and the latest technologies, we will ensure that your new website will be visible, accessible, and treads lightly." },
@@ -17,26 +18,27 @@ const leadshome2 = [
 
 export default function page() {
     return (
-        <main>
-            <Hero />
-            <div className="bg-[#111013]">
-                <WhatWeDo />
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 ">
-                <Capabilities />
-                <Showcase />
-            </div>
-            <div className="bg-white">
-                <WebAndMobile />
-            </div>
-            <div className="mx-auto max-w-2xl mt-0 sm:mt-0 px-4 py-0 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
-                <Leads data={leadshome2} />
-            </div>
+        <>
+            <header>
+                <Navbar2 />
+            </header>
+            <main>
+                <Hero />
+                <div className="bg-[#111013]">
+                    <WhatWeDo />
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 ">
+                    <Capabilities />
+                    <Showcase />
+                </div>
 
-            <Clients />
-            <Testimonial />
-            <MapAndAddress />
-            <Careers />
-        </main >
+                <WebAndMobile />
+                <Leads data={leadshome2} />
+                <Clients />
+                <Testimonial />
+                <MapAndAddress />
+                <Careers />
+            </main >
+        </>
     )
 }

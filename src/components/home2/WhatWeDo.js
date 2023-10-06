@@ -36,7 +36,7 @@ export default function WhatWeDo() {
                                 <Image src={ChatDots} alt="SelectionAll" className='w-8 h-8' />
                                 <p className='text-white text-lg font-bold '>Press Releases</p>
                                 <p className="text-gray-400 opacity-90   text-base font-normal leading-6">
-                                    Strategy is a forward-looking plan for your brand's behavior.
+                                    Strategy is a forward-looking plan for your brand&apos;s behavior.
                                 </p>
                             </div>
                             <div className='sm:w-1/2 pe-4 space-y-2'>
@@ -50,7 +50,7 @@ export default function WhatWeDo() {
                                 <Image src={FigmaLogo} alt="SelectionAll" className='w-6 h-8' />
                                 <p className='text-white text-lg font-bold '>Website/App Design</p>
                                 <p className="text-gray-400 opacity-90 text-base font-normal leading-6">
-                                    UI/UX design gives the appearance above your brand's behavior.
+                                    UI/UX design gives the appearance above your brand&apos;s behavior.
                                 </p>
                             </div>
                         </div>

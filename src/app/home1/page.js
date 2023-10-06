@@ -5,6 +5,7 @@ import ExpectedFeatures from "@/components/home1/ExpectedFeatures";
 import Leads from "@/components/home1/Leads";
 import Pricing from "@/components/home1/Pricing";
 import FAQ from "@/components/home1/FAQ";
+import Navbar1 from "@/components/navbar/Navbar1";
 
 export default function Home() {
     const transactionTextContent = {
@@ -15,19 +16,25 @@ export default function Home() {
 
 
     return (
-        <main>
-            <Hero />
-            <div className="bg-red-100">
-                <TraficSources textContent={transactionTextContent} image={transactionImage} />
-                <ExpectedFeatures />
-                <Leads />
-            </div>
-            <div className="bg-indigo-900">
-                <Pricing />
-            </div>
-            <div className="bg-indigo-950">
-                <FAQ />
-            </div>
-        </main>
+        <>
+            <header>
+                <Navbar1 />
+            </header>
+
+            <main>
+                <Hero />
+                <div className="bg-red-100">
+                    <TraficSources textContent={transactionTextContent} image={transactionImage} />
+                    <ExpectedFeatures />
+                    <Leads />
+                </div>
+                <div className="bg-indigo-900">
+                    <Pricing />
+                </div>
+                <div className="bg-indigo-950">
+                    <FAQ />
+                </div>
+            </main>
+        </>
     );
 }

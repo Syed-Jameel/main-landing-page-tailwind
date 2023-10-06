@@ -18,9 +18,7 @@ export default function Testimonials() {
 
                 </div>
 
-                <div className='col-span-3 text-white'>
-                    Carousel will be here
-                </div>
+
             </div>
         </div>
     )

@@ -34,6 +34,7 @@ export const navigationItems = [
         sublinks: [
             { name: "Blog 1", href: "/blog1" },
             { name: "Blog 2", href: "/blog2" },
+            { name: "Blog 3", href: "/blog3" },
         ]
     },
     {

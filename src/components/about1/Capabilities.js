@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Accordion from '../common/Accordion';
 
 const accordionData = [
@@ -29,41 +29,43 @@ export default function WebAndMobile() {
 
 
     return (
+        <div className="mx-auto max-w-2xl px-4 py-10 sm:px-12 sm:py-16 lg:max-w-7xl ">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-x-4">
 
-        <div className="px-4 py-6  grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-x-4">
+                {/* Left section */}
+                <div className="">
+                    <div className="flex flex-col justify-start items-start space-y-4 sm:pr-4 ">
+                        <h3 className="text-gray-600 uppercase font-medium">capabilities</h3>
+                        <h1 className="text-gray-800 text-4xl sm:text-5xl font-bold ">
+                            Putting our focus on
+                            changing the way people
+                            think of mobile
+                            experience.
+                        </h1>
 
-            {/* Left section */}
-            <div className="">
-                <div className="flex flex-col justify-start items-start space-y-4 sm:pr-4 ">
-                    <h3 className="text-gray-600 uppercase font-medium">capabilities</h3>
-                    <h1 className="text-gray-800 text-4xl sm:text-5xl font-bold ">
-                        Putting our focus on
-                        changing the way people
-                        think of mobile
-                        experience.
-                    </h1>
-
+                    </div>
                 </div>
-            </div>
 
-            {/* Right section */}
-            <div className="flex justify-center items-baseline ">
-                <div className='w-full sm:w-[60%]'>
-                    {accordionData.map((item) => {
-                        return (
-                            <Accordion
-                                key={item.id}
-                                id={item.id}
-                                title={item.title}
-                                description={item.description}
-                                activeId={activeId}
-                                setActiveId={setActiveId}
-                            ></Accordion>
-                        );
-                    })}
+                {/* Right section */}
+                <div className="flex justify-center items-baseline ">
+                    <div className='w-full sm:w-[60%]'>
+                        {accordionData.map((item) => {
+                            return (
+                                <Accordion
+                                    key={item.id}
+                                    id={item.id}
+                                    title={item.title}
+                                    description={item.description}
+                                    activeId={activeId}
+                                    setActiveId={setActiveId}
+                                ></Accordion>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
+
 
     )
 }

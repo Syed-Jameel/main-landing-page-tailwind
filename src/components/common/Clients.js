@@ -20,7 +20,7 @@ export default function Clients() {
     const pathname = usePathname();
 
     return (
-        <div className="mx-auto max-w-2xl px-6 py-10 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-6 py-10 sm:px-12 sm:py-16 lg:max-w-7xl">
             <div className="flex flex-wrap justify-between gap-x-16  gap-y-10 ">
                 {
                     pathname === "/home2" ? <Image src={oh3} alt="oh3" className='w-[130px] h-auto hover:scale-110 transition duration-300' /> : <Image src={Tinder} alt="Tinder" className='w-[125px] h-[50px] hover:scale-110 transition duration-300' />

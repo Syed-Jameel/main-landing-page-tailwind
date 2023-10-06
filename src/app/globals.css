@@ -41,6 +41,40 @@ main {
 }
 
 
+/* blog style */
+.card-zoom {
+    @apply relative flex items-center justify-center overflow-hidden  shadow-xl ;
+}
+
+.card-zoom-image {
+    @apply absolute w-full h-full transition-all duration-700 ease-in-out transform bg-center bg-cover;
+}
+
+.card-zoom:hover .card-zoom-image {
+    @apply scale-110;
+}
+
+.card-zoom:hover .card-zoom-text {
+    @apply scale-100;
+}
+
+.facebookBtn:hover{
+    box-shadow:  0 3px 25px #79ADFF;
+}
+
+.linkedinBtn:hover{
+    box-shadow:  0 3px 25px #29B4FF;
+}
+
+.instagramBtn:hover{
+    box-shadow:  0 3px 25px #9E7CF7;
+}
+
+.youtubeBtn:hover{
+    box-shadow:  0 3px 25px #F44F54;
+}
+
+
 @media (max-width: 700px) {
     html {
         font-size: 85%;
