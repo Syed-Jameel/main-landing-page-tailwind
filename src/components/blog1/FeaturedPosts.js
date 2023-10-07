@@ -9,14 +9,14 @@ export default function FeaturedPosts() {
             <div className="space-y-4">
                 {
                     featuredPostsData.map((post, index) => (
-                        <div key={index} className="border-2  rounded-lg p-2 h-[120px] flex justify-between items-center">
+                        <div key={index} className="border-2 px-2 rounded-lg h-[120px] flex justify-between items-center">
 
-                            <div className="grid grid-cols-3 ">
-                                <div >
+                            <div className="grid grid-cols-3">
+                                <div className="col-span-1">
                                     <div className="card-zoom bg-red-100 w-full h-[100px] rounded-lg">
                                         <div className="card-zoom-image">
                                             <Link href={post.imageLink} >
-                                                <Image src={post.image} alt={post.imageAlt} width={200} height={0} className="h-[100%]" />
+                                                <Image src={post.image} alt={post.imageAlt} fill className="w-full h-full object-cover" />
                                             </Link>
                                         </div>
                                     </div>

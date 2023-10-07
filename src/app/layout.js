@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full bg-white">
-      <body className={montserrat.className}>
+      <body className={montserrat.className} suppressHydrationWarning={true}>
         {/* <header className="fixed top-0 left-0 right-0 z-50 ">
           <Navbar />
         </header> */}

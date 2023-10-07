@@ -7,7 +7,7 @@ export default function Hero() {
                         About 2
                     </h1>
                     <p className="text-gray-900 opacity-90  text-lg font-normal leading-6">
-                        Leave us a little info, and we’ll be in touch.
+                        Leave us a little info, and we&apos;sll be in touch.
                     </p>
                     <button className="bg-blue-600 group  flex  items-center transition duration-500 hover:bg-gray-800 text-white text-base font-semibold py-1 px-3 mt-6 rounded">
                         Contact Us

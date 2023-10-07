@@ -22,7 +22,7 @@ export default function Collaborate() {
                 <hr />
                 <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 sm:gap-x-4">
                     <p className="text-base font-normal sm:font-semibold text-white">
-                        We’re <b>a team of creatives</b> who are excited about unique ideas and help fin-tech companies to <b>create amazing identity</b> by crafting top-notch UI/UX.
+                        We&apos;re <b>a team of creatives</b> who are excited about unique ideas and help fin-tech companies to <b>create amazing identity</b> by crafting top-notch UI/UX.
                     </p>
                 </div>
             </div>

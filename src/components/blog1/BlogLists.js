@@ -7,7 +7,7 @@ export default function BlogLists({ blogData }) {
             {
                 blogData.map((blog) => (
                     <div key={blog.id} className="space-y-4 ">
-                        <div className="card-zoom bg-gray-100 w-full h-[28vh] sm:h-[60vh] rounded-xl ">
+                        <div className="card-zoom bg-gray-100 w-[100%] h-[300px] sm:h-[450px] rounded-xl ">
                             <button className="absolute z-10 top-4 end-4 bg-indigo-500 hover:bg-indigo-700 text-white hover:text-gray-200 shadow-2xl hover:shadow-none font-semibold p-2 rounded-full " >
                                 <div className="grid grid-cols-3 gap-x-2 text-gray-200 text-sm">
                                     <div title="Comments"><i className="bi bi-chat"></i> {blog.comments}</div>
@@ -17,7 +17,7 @@ export default function BlogLists({ blogData }) {
                             </button>
                             <div className="card-zoom-image">
                                 <Link href={blog.imageLink} >
-                                    <Image src={blog.image} alt={blog.imageAlt} width={1000} height={1000} className="h-[100%]" />
+                                    <Image src={blog.image} alt={blog.imageAlt} fill className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </div>

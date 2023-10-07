@@ -36,17 +36,17 @@ export default function Page() {
             </header>
             <main>
                 <div className=" px-6 py-4 sm:px-8 sm:py-4 ">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-10">
-                        <div className="col-span-3">
+                    <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-y-10 md:gap-x-4 lg:gap-x-6">
+                        <div className="order-1 md:col-span-4 md:order-1 lg:col-span-2 lg:order-1">
                             <Nav />
                         </div>
 
-                        <div className="col-span-6">
+                        <div className="order-3 md:col-span-12  md:order-3  lg:col-span-7 lg:order-2">
                             <BlogLists blogData={displayedData} />
                             <Pagination handlePageChange={handlePageChange} currentPage={currentPage} totalBlogs={totalBlogs} blogsPerPage={blogsPerPage} startIndex={startIndex} endIndex={endIndex} />
                         </div>
 
-                        <div className=" col-span-3 space-y-10">
+                        <div className="order-2 md:col-span-8  md:order-2 lg:col-span-3 lg:order-3 space-y-10">
                             <UserProfile />
                             <FollowMe />
                             <FeaturedPosts />

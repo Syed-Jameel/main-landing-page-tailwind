@@ -24,7 +24,6 @@ export const navigationItems = [
         current: false,
         sublinks: [
             { name: "Service 1", href: "/service1" },
-            { name: "Service 2", href: "/service2" },
         ]
     },
     {

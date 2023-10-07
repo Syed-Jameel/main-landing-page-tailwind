@@ -6,8 +6,8 @@ export default function UserProfile() {
     return (
         <div>
             <div className="relative mb-20">
-                <Image src={BlogUserProfile} alt="BlogUserProfile" className="rounded-xl shadow-2xl" />
-                <Image src={BlogUser} alt="BlogUser" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 z-10 rounded-full border-4 bg-white" />
+                <Image src={BlogUserProfile} alt="BlogUserProfile" className="w-full object-cover rounded-xl shadow-2xl" />
+                <Image src={BlogUser} alt="BlogUser" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2  z-10  rounded-full border-4 bg-white" />
             </div>
             <div className="text-center p-2 space-y-4">
                 <h1 className="text-gray-900 font-bold text-xl">Alice Qelvin</h1>
